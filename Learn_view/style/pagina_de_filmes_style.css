@@ -1,95 +1,118 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: View;
+  background-color: #F5C120;
+}
+@font-face {
+  font-family: Learn;
+  src: url(Avenue.otf);
+}
+@font-face {
+  font-family: View;
+  src: url(Louis\ George\ Cafe.ttf);
 }
 /*Header-Inicio*/
 .Title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70px;
-    margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  padding-top: 20px;
+  background-color: white;
+}
+.Title h1{
+  font-family: Learn;
+  font-weight: 1000;
+  letter-spacing: 30px;
+}
+.Title h2{
+  font-family: View;
+  font-weight: 10;
+  font-size: 40px;
 }
 .menu{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-style: solid;
-    border-width: 2px;
-    border-left: 0px;
-    border-right: 0px;
-    font-size: 26px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 2px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 26px;
+  width: 100%;
+  background-color: white;
 }
 .itens{
-    display: flex;
-    list-style: none;
-    padding: 20px 0px 20px 20px;
+  display: flex;
+  list-style: none;
+  padding: 5px 0px 5px 10px;
 }
 .itens li a{
-    padding: 15px;
-    text-decoration: none;
-    color: black;
+  font-weight: 50px;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
 }
 .search{
-    background-color: black;
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background-color: black;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .search__input{
-    margin: 26px 0 26px 0;
-    width: 70%;
-    height: 23px;
-    font-family: inherit;
-    font-size: 20px;
-    text-align: inherit;
-    background-color: #f4f2f2;
-    border: none;
-    color: black;
-    padding: 0.7rem 1rem;
-    border-radius: 30px;
-    transition: all ease-in-out .5s;
-    margin-right: -2rem;
+   margin: 20px 0 20px 0;
+  width: 70%;
+  height: 23px;
+  font-family: inherit;
+  font-size: 20px;
+  text-align: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: black;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
 }
 .search__input:hover, .search__input:focus {
-    box-shadow: 0 0 1em #00000013;
+  box-shadow: 0 0 1em #00000013;
   }
   
-  .search__input:focus {
-    outline: none;
-    background-color: #f0eeee;
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
   }
   
   .search__input::-webkit-input-placeholder {
-    font-weight: 100;
-    color: #ccc;
+  font-weight: 100;
+  color: #ccc;
   }
   
   .search__input:focus + .search__button {
-    background-color: #f0eeee;
+  background-color: #f0eeee;
   }
   
   .search__button {
-    border: none;
-    background-color: #f4f2f2;
-    margin-top: .1em;
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: .1em;
   }
   
   .search__button:hover {
-    cursor: pointer;
+  cursor: pointer;
   }
   
   .search__icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: #b4b4b4;
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
   }
   /*Dropdown menu*/
 .carret-down{
@@ -97,8 +120,9 @@ body{
   background-color: black;
 }
 
-.dropdown label{
+.carret-down label{
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -106,8 +130,8 @@ body{
   display: flex;
   justify-content: center;
   background-color: #F5C120;
-  box-shadow: inset 0px -20px 25px -20px;
-  transition: height 0.5s;
+  box-shadow: inset 0px -20px 25px -23px;
+  transition: height 0.4s;
   height: 0px;
 }
 
@@ -126,7 +150,7 @@ body{
   text-decoration: none;
   color: black;
   font-size: 25px;
-  animation: fadein 1.6s;
+  animation: fadein 1.3s;
 }
 
 #menuT{
@@ -138,9 +162,7 @@ body{
 
 .dropdown:hover .filtros ul{
   display: flex;
- 
 }
-
 @keyframes fadein {
   from {
     opacity: 0;
@@ -149,20 +171,9 @@ body{
     opacity: 1;
   }
 }
-
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 /*Header-Fim*/
 /*----------*/
 /*Main-Inicio*/
-
 
 
 
