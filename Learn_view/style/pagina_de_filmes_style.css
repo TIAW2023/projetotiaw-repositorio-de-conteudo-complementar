@@ -14,6 +14,10 @@ body{
   font-family: View;
   src: url(Louis\ George\ Cafe.ttf);
 }
+@font-face {
+  font-family: Title_movie;
+  src: url(SourceSansPro-Black.ttf);
+}
 /*Header-Inicio*/
 .Title{
   display: flex;
@@ -24,12 +28,12 @@ body{
   padding-top: 20px;
   background-color: white;
 }
-.Title h1{
+.Learn{
   font-family: Learn;
   font-weight: 1000;
   letter-spacing: 30px;
 }
-.Title h2{
+.View{
   font-family: View;
   font-weight: 10;
   font-size: 40px;
@@ -174,6 +178,87 @@ body{
 /*Header-Fim*/
 /*----------*/
 /*Main-Inicio*/
+/*filmes-inicio*/
+.itensf{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: center;
+}
+.itensf li{
+  font-family: Title_movie;
+  list-style: none;
+  width: 15%;
+  padding: 40px;
+}
+.titulo_filme{
+  text-align: center;
+  font-weight: 1000;
+}
+.itensf li img{
+  width: 100%;
+}
+/*filmes-fim*/
+/*cardbox-inicio*/
+.background{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  display:none;
+}
+
+.card{
+  background-color: #b1b4ca;
+  border-style: solid;
+  border-color: rgb(10, 10, 10);
+  border-width: 5px;
+  width: 50%;
+  height: 35%;
+  box-shadow: 10px 10px 0px 0px;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content img{
+  width: 20%;
+  padding: 30px;
+}
+.txt{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  width: 70%;
+}
+.bold{
+  font-family: Title_movie;
+}
+.txt p{
+  font-size: 25px;
+}
+.txt span{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100PX;
+}
+.fa-xmark{
+position: fixed;
+left: 1250px;
+top: 305px;  
+}
+#cardCheck{
+  display: none;
+}
+#cardCheck:checked + .background{
+  display: flex;
+}
+
 
 
 
