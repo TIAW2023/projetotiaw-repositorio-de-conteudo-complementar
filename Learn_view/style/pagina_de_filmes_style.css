@@ -6,6 +6,9 @@ body{
   font-family: View;
   background-color: #F5C120;
 }
+label{
+  cursor: pointer;
+}
 @font-face {
   font-family: Learn;
   src: url(Avenue.otf);
@@ -179,17 +182,20 @@ body{
 /*----------*/
 /*Main-Inicio*/
 /*filmes-inicio*/
+.filmes{
+  display: flex;
+  justify-content: center;
+}
 .itensf{
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
-  justify-content: center;
 }
 .itensf li{
   font-family: Title_movie;
   list-style: none;
-  width: 15%;
-  padding: 40px;
+  width: 13%;
+  margin: 10px;
 }
 .titulo_filme{
   text-align: center;
@@ -216,16 +222,16 @@ body{
   background-color: #b1b4ca;
   border-style: solid;
   border-color: rgb(10, 10, 10);
+  width: 1000px;
   border-width: 5px;
-  width: 50%;
-  height: 35%;
   box-shadow: 10px 10px 0px 0px;
 }
 .content{
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
-.content img{
+.filme_img{
   width: 20%;
   padding: 30px;
 }
@@ -247,10 +253,13 @@ body{
   justify-content: space-between;
   padding-right: 100PX;
 }
+.xmark{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
 .fa-xmark{
-position: fixed;
-left: 1250px;
-top: 305px;  
+  padding: 10px 10px 0 0;
 }
 #cardCheck{
   display: none;
