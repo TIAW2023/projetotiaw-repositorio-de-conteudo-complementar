@@ -66,7 +66,7 @@ label {
   text-decoration: none;
   color: black;
 }
-.menuh{
+.menuh {
   display: flex;
   justify-content: space-between;
 }
@@ -144,7 +144,7 @@ label {
   margin-right: 30px;
   height: 60px;
 }
-.close i{
+.close i {
   display: flex;
   align-items: center;
 }
@@ -197,7 +197,7 @@ label {
     z-index: 999;
     transition: height 0.6s;
   }
-  
+
   #mobile:checked + .menu {
     height: 100%;
   }
@@ -273,10 +273,10 @@ label {
     font-weight: 10;
     font-size: 20px;
   }
-  .side-bars i{
+  .side-bars i {
     font-size: x-large;
   }
-  .close i{
+  .close i {
     font-size: xx-large;
   }
 }
@@ -420,19 +420,19 @@ main {
   justify-content: space-between;
   white-space: nowrap;
 }
-.onde img{
-  width:20%;
+.onde img {
+  width: 20%;
   margin-right: 40px;
 }
-.nota img{
+.nota img {
   width: 30%;
 }
-.onde{
+.onde {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.onde-nota{
+.onde-nota {
   width: 100%;
 }
 .xmark {
@@ -450,16 +450,16 @@ main {
   display: flex;
 }
 /*Cardbox-Mobile*/
-@media (max-width: 1024px),(max-height: 600px){
-  .card{
+@media (max-width: 1024px), (max-height: 600px) {
+  .card {
     width: 1000px;
     height: 70%;
   }
 }
-@media (max-width: 1000px){
-  .card{
+@media (max-width: 1000px) {
+  .card {
     width: 80%;
-    height: 80%;
+    height: 90%;
   }
   .xmark {
     width: 100%;
@@ -467,14 +467,14 @@ main {
     justify-content: right;
     font-size: x-large;
   }
-  .onde img{
-    width:15%;
+  .onde img {
+    width: 15%;
     margin-right: 40px;
   }
-  .nota img{
+  .nota img {
     width: 50%;
   }
-  .content{
+  .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -492,26 +492,26 @@ main {
     max-width: 100%;
     line-height: 1.5em;
   }
-  .bold{
+  .bold {
     margin-right: 10px;
     margin-bottom: 0;
   }
-  @media (max-width: 478px){
+  @media (max-width: 478px) {
     .filme_img {
       width: 100%;
     }
-    .onde img{
-      width:30%;
+    .onde img {
+      width: 30%;
       margin-right: 40px;
     }
-    .nota img{
+    .nota img {
       width: 80%;
     }
-    .card{
+    .card {
       width: 100%;
       height: 100%;
     }
-    .content{
+    .content {
       height: 100%;
     }
     #cardCheck:checked .menuh {
