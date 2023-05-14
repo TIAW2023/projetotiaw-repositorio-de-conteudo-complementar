@@ -6,7 +6,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 * Gustavo Coelho Reis
 * Savio Belfort Nascimento Gama
-* Ana
+* Ana Rocha
 * Antônio Henrique Bertolini Vidal
 * Vitor Borges
 
