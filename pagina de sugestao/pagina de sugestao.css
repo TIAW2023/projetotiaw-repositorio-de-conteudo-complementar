@@ -1,0 +1,44 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background-color:green;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 15px;
+}
+
+legend{
+  border: 1px ;
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+}
+ .inputUser{
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 7px;
+ }
+
+ .labelinput{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+ }
+ .inputUser:focus ~ .labelinput{
+  top: -20px;
+  font-size: 12px;
+  background-color: white;
+
+ }
