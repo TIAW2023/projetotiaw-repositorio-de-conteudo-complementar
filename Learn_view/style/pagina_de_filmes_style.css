@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: View;
-  background-color: #f5c120;
+}
+label {
+  cursor: pointer;
 }
 @font-face {
   font-family: Learn;
@@ -162,7 +163,6 @@ body {
   }
   .header-mobile {
     display: flex;
-    background-color: white;
   }
   .Title {
     justify-content: left;
@@ -285,48 +285,64 @@ body {
 .carret-down {
   width: 100%;
   background-color: black;
-  cursor: pointer;
 }
 
-.carret-down div {
+.carret-down label {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.carret-down div i {
-  height: 5%;
-}
+
 .filtros {
   display: flex;
   justify-content: center;
   background-color: #f5c120;
   box-shadow: inset 0px -20px 25px -23px;
+  transition: height 0.4s;
   height: 0px;
   overflow: auto;
 }
-.altura{
-  height: 100%;
-  padding: 30px;
-}
+
 .filtros ul {
-  display: flex;
-  overflow: hidden;
+  display: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  animation: fadein 1s;
   list-style: none;
 }
 .filtros li {
   padding-right: 40px;
+}
+.filtros ul li a {
+  text-decoration: none;
   color: black;
   font-size: 25px;
-  cursor: pointer;
+}
+
+#menuT {
+  display: none;
+}
+.dropdown:hover .filtros {
+  height: 100px;
+}
+
+.dropdown:hover .filtros ul {
+  display: flex;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*Dropdown-Fim*/
 /*----------*/
 /*Main-Inicio*/
 main {
-  height: 95vh;
+  background-color: #f5c120;
 }
 /*filmes-inicio*/
 .filmes {
@@ -338,7 +354,6 @@ main {
 .filme {
   margin: 20px;
   color: black;
-  cursor: pointer;
 }
 .titulo_filme {
   font-size: x-large;
@@ -354,143 +369,153 @@ main {
   display: flex;
   justify-content: center;
   margin: 0;
-  width: 100%;
-}
-.hide{
-  display: none;
-}
-.nenc{
-  margin-top: 20%;
-  font-size: xx-large;
-  width: 50%;
 }
 /*filmes-fim*/
 /*cardbox-inicio*/
-.cardbox {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
   display: none;
 }
+
 .card {
-  display: flex;
-  flex-direction: row;
-  height: 55%;
-  width: 70%;
-  padding: 20px;
-  color: white;
-  background-color: #203250;
+  background-color: #b1b4ca;
   border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-radius: 0%;
+  width: 1000px;
+  height: 50%;
   border-width: 5px;
-  border-radius: 0;
+  box-shadow: 10px 10px 0px 0px rgb(8, 8, 8);
 }
-#close_card {
-  font-size: 25px;
-  cursor: pointer;
-}
-.card span p:nth-child(2) {
-  text-decoration: underline;
-  color: #f0eeee;
-}
-.card img {
-  aspect-ratio: 6/9;
-  width: auto;
-  margin-right: 20px;
-}
-.estrelas img {
-  aspect-ratio: 4/4;
-  width: 6%;
-}
-.medidor {
+.content {
   display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  padding-bottom: 30px;
+  color: black;
 }
-.medidor::before {
-  content: "";
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: #081c22;
-  border-radius: 50%;
+.filme_img {
+  width: 25%;
+  padding: 30px;
 }
-.valor_barra {
-  margin: 0;
-  position: relative;
-  font-weight: bold;
+.txt {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 70%;
 }
-.medidor:hover{
-  height: 60px;
-  width: 60px;
-  transition: width 0.1s;
-  transition: height 0.1s;
+.bold {
+  font-family: Title_movie;
 }
-.medidor:hover::before{
-  height: 50px;
-  width: 50px;
-  transition: width 5ms;
-  transition: height  5ms;
+.txt p {
+  font-size: 25px;
 }
-.card_bottom{
+.txt span {
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
-.fa-bookmark{
-  font-size: 30px;
-  cursor: pointer;
+.onde img {
+  width: 20%;
+  margin-right: 40px;
 }
-@media (max-width: 930px) {
-  .card{
-    width: 90%;
-    height: 60%;
+.nota img {
+  width: 30%;
+}
+.onde {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.onde-nota {
+  width: 100%;
+}
+.xmark {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.fa-xmark {
+  padding: 10px 10px 0 0;
+}
+#cardCheck {
+  display: none;
+}
+#cardCheck:checked + .background {
+  display: flex;
+}
+/*Cardbox-Mobile*/
+@media (max-width: 1024px), (max-height: 600px) {
+  .card {
+    width: 1000px;
+    height: 70%;
   }
-  
-  .card img{
-  object-fit: contain;
- width: 60%;
+}
+@media (max-width: 1000px) {
+  .card {
+    width: 80%;
+    height: 90%;
   }
-  .card_bottom{
+  .xmark {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    font-size: x-large;
+  }
+  .onde img {
+    width: 15%;
+    margin-right: 40px;
+  }
+  .nota img {
     width: 50%;
   }
-}
-@media (max-width: 575px) {
-  .card{
+  .content {
     flex-direction: column;
-    height: 80%;
-    position: relative;
-  }
-  #close_card {
-    top:0;
-    right: 10px;
-    position: absolute;
-  }
-  .card img{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  }
-  .card_bottom{
-   width: 90%;
-  }
-  .nenc{
-    font-size: 20px;
-  }
-}
-@media (max-width: 400px){
-  .card{
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    width: 100%;
+  }
+  .filme_img {
+    width: 45%;
+  }
+  .txt {
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow-x: scroll;
+    display: block;
+    max-height: 40%;
+    max-width: 100%;
+    line-height: 1.5em;
+  }
+  .bold {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  @media (max-width: 478px) {
+    .filme_img {
+      width: 100%;
+    }
+    .onde img {
+      width: 30%;
+      margin-right: 40px;
+    }
+    .nota img {
+      width: 80%;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+    }
+    .content {
+      height: 100%;
+    }
+    #cardCheck:checked .menuh {
+      display: none;
+    }
   }
 }
