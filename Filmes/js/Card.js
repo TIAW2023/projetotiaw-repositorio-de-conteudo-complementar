@@ -21,18 +21,17 @@ function openCard(posição) {
   let barra = document.querySelector(".medidor"),
     valorBarra = document.querySelector(".valor_barra");
   valorBarra.textContent = `${Math.ceil(filmes[posição].vote_average * 10)}%`;
-  barra.style.background = `conic-gradient(#21d07a ${
-    Math.ceil(filmes[posição].vote_average * 10) * 3.6
-  }deg,#204529 0deg)`;
-  if(localStorage.getItem("favs")){
-  if (localStorage.getItem("favs").includes(JSON.stringify(filmes[parametros.get("pos")]))) {
-    bookmark.classList.add("fa-solid");
-    bookmark.classList.remove("fa-regular");
-  } else {
-    bookmark.classList.remove("fa-solid");
-    bookmark.classList.add("fa-regular");
+  barra.style.background = `conic-gradient(#21d07a ${Math.ceil(filmes[posição].vote_average * 10) * 3.6
+    }deg,#204529 0deg)`;
+  if (JSON.parse(localStorage.userLogado).favs) {
+    if (JSON.stringify(JSON.parse(localStorage.userLogado).favs).includes(JSON.stringify(filmes[parametros.get("pos")]))) {
+      bookmark.classList.add("fa-solid");
+      bookmark.classList.remove("fa-regular");
+    } else {
+      bookmark.classList.remove("fa-solid");
+      bookmark.classList.add("fa-regular");
+    }
   }
-}
 }
 document
   .getElementById("close_card")

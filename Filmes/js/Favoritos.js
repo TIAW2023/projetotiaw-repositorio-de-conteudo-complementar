@@ -1,29 +1,44 @@
+let atual;
+let users = JSON.parse(localStorage.listaUser)
+for (let i = 0; i < users.length; i++) {
+  if (users[i].userCad == JSON.parse(localStorage.userLogado).user || users[i].userCad == JSON.parse(localStorage.userLogado).userCad) {
+    atual = i;
+  }
+}
 let bookmark = document.getElementsByClassName("fa-bookmark")[0];
 let favs = [];
+let user;
+
 bookmark.addEventListener("click", function () {
   let parametros = new URLSearchParams(window.location.search);
 
   if (bookmark.classList.contains("fa-regular")) {
-    if (localStorage.favs) {
-      favs = JSON.parse(localStorage.getItem("favs"));
+    user = JSON.parse(localStorage.getItem("listaUser"));
+    user[atual].favs = []
+    if (JSON.parse(localStorage.getItem("listaUser"))[atual].favs) {
+      user[atual].favs = JSON.parse(localStorage.getItem("listaUser"))[atual].favs
     }
     let novoFav = filmes[parametros.get("pos")];
-    favs.push(novoFav);
-    localStorage.favs = JSON.stringify(favs);
+    user[atual].favs.push(novoFav);
+    localStorage.listaUser = JSON.stringify(user);
     bookmark.classList.add("fa-solid");
     bookmark.classList.remove("fa-regular");
   } else {
-    favs = JSON.parse(localStorage.getItem("favs"));
-    for (let i = 0; i < favs.length; i++) {
-      if (filmes[parametros.get("pos")].imdb_id == favs[i].imdb_id) {
-        favs.splice(i, 1);
-        localStorage.favs = JSON.stringify(favs);
+    user = JSON.parse(localStorage.getItem("listaUser"));
+    for (let i = 0; i < user[atual].favs.length; i++) {
+      if (filmes[parametros.get("pos")].imdb_id == user[atual].favs[i].imdb_id) {
+        user[atual].favs.splice(i, 1);
+        localStorage.listaUser = JSON.stringify(user);
       }
     }
-    if (localStorage.getItem("favs") == "[]") {
-      localStorage.removeItem("favs");
+    if (JSON.parse(localStorage.getItem("listaUser"))[atual].favs == "[]") {
+      user = JSON.parse(localStorage.getItem("listaUser"));
+      delete user[atual].favs
+      localStorage.listaUser = JSON.stringify(user)
     }
     bookmark.classList.remove("fa-solid");
     bookmark.classList.add("fa-regular");
   }
-});
+  localStorage.userLogado = JSON.stringify(JSON.parse(localStorage.listaUser)[atual]);
+}
+);
