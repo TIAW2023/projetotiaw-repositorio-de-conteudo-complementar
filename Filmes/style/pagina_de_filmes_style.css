@@ -302,25 +302,39 @@ body {
   background-color: #f5c120;
   box-shadow: inset 0px -20px 25px -23px;
   height: 0px;
-  overflow: auto;
+  transition: 1s height;
+  overflow: hidden;
 }
 .altura{
-  height: 100%;
-  padding: 30px;
+  height: 100px;
 }
-.filtros ul {
+.filtros .altura{
+  height: 100px;
+}
+.ulFiltros {
   display: flex;
+  height: 0px;
   overflow: hidden;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   list-style: none;
+  transition: 1s height;
 }
 .filtros li {
   padding-right: 40px;
   color: black;
   font-size: 25px;
   cursor: pointer;
+}
+@media (max-width:698px) {
+  .filtros li{
+    padding-right: 10px;
+    overflow: scroll;
+  }
+  .ulFiltros{
+    overflow: scroll;
+  }
 }
 /*Dropdown-Fim*/
 /*----------*/
@@ -392,6 +406,9 @@ main {
 #close_card {
   font-size: 25px;
   cursor: pointer;
+}
+.card span p:nth-child(3){
+  overflow: scroll;
 }
 .card span p:nth-child(2) {
   text-decoration: underline;
