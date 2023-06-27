@@ -7,18 +7,22 @@ body {
   font-family: View;
   background-color: #f5c120;
 }
+
 @font-face {
   font-family: Learn;
   src: url(Avenue.otf);
 }
+
 @font-face {
   font-family: View;
   src: url(Louis\ George\ Cafe.ttf);
 }
+
 @font-face {
   font-family: Title_movie;
   src: url(SourceSansPro-Black.ttf);
 }
+
 /*Header-Inicio*/
 .Title {
   display: flex;
@@ -29,17 +33,20 @@ body {
   background-color: white;
   color: black;
 }
+
 .Learn {
   font-family: Learn;
   font-weight: bolder;
   font-size: 80px;
   letter-spacing: 30px;
 }
+
 .View {
   font-family: View;
   font-weight: 10;
   font-size: 40px;
 }
+
 .menu {
   flex-wrap: wrap;
   align-items: center;
@@ -53,22 +60,26 @@ body {
   width: 100%;
   background-color: white;
 }
+
 .menuop {
   display: flex;
   list-style: none;
   align-items: center;
   padding-left: 10px;
 }
+
 .menuop li a {
   font-weight: 50px;
   padding: 15px;
   text-decoration: none;
   color: black;
 }
+
 .menuh {
   display: flex;
   justify-content: space-between;
 }
+
 .search {
   background-color: black;
   width: 25%;
@@ -77,6 +88,7 @@ body {
   justify-content: center;
   text-align: center;
 }
+
 .search__input {
   margin: 20px 0 20px 0;
   width: 70%;
@@ -92,6 +104,7 @@ body {
   transition: all ease-in-out 0.5s;
   margin-right: -2rem;
 }
+
 .search__input:hover,
 .search__input:focus {
   box-shadow: 0 0 1em #00000013;
@@ -107,7 +120,7 @@ body {
   color: #ccc;
 }
 
-.search__input:focus + .search__button {
+.search__input:focus+.search__button {
   background-color: #f0eeee;
 }
 
@@ -127,6 +140,7 @@ body {
   margin-right: 3px;
   background-color: rgba(0, 0, 0, 0);
 }
+
 /*Header-Mobile*/
 .side-bars {
   display: none;
@@ -143,6 +157,7 @@ body {
   margin-right: 30px;
   height: 60px;
 }
+
 .close i {
   display: flex;
   align-items: center;
@@ -155,15 +170,18 @@ body {
     justify-content: right;
     margin-right: 30px;
   }
+
   .side-bars i {
     display: flex;
     align-items: center;
     width: 10%;
   }
+
   .header-mobile {
     display: flex;
     background-color: white;
   }
+
   .Title {
     justify-content: left;
     align-items: center;
@@ -172,17 +190,20 @@ body {
     background-color: white;
     color: black;
   }
+
   .Learn {
     font-family: Learn;
     font-weight: bolder;
     font-size: 50px;
     letter-spacing: 10px;
   }
+
   .View {
     font-family: View;
     font-weight: 10;
     font-size: 30px;
   }
+
   .menu {
     display: flex;
     flex-direction: column;
@@ -198,35 +219,43 @@ body {
     transition: height 0.6s;
   }
 
-  #mobile:checked + .menu {
+  #mobile:checked+.menu {
     height: 100%;
   }
-  #mobile:checked + .menu .close {
+
+  #mobile:checked+.menu .close {
     display: flex;
   }
-  #mobile:checked + .menu .menuop li a {
+
+  #mobile:checked+.menu .menuop li a {
     display: flex;
   }
-  #mobile:checked + .menu .search {
+
+  #mobile:checked+.menu .search {
     display: flex;
   }
-  #mobile:checked + .menu .menuh {
+
+  #mobile:checked+.menu .menuh {
     display: flex;
   }
+
   .menuh {
     display: none;
     flex-direction: column;
     width: 100%;
   }
+
   .menuop li a {
     display: none;
   }
+
   .menuop {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+
   .search {
     width: 35%;
     background: none;
@@ -236,6 +265,7 @@ body {
     justify-content: center;
     margin-right: 0px;
   }
+
   .search__input {
     width: 50%;
     height: 30px;
@@ -248,6 +278,7 @@ body {
     transition: all ease-in-out 0.5s;
     margin-right: 0;
   }
+
   .search__button {
     right: 25%;
     position: absolute;
@@ -261,6 +292,7 @@ body {
     margin-right: 3px;
   }
 }
+
 @media (max-width: 336px) {
   .Learn {
     font-family: Learn;
@@ -268,18 +300,22 @@ body {
     font-size: 40px;
     letter-spacing: 10px;
   }
+
   .View {
     font-family: View;
     font-weight: 10;
     font-size: 20px;
   }
+
   .side-bars i {
     font-size: x-large;
   }
+
   .close i {
     font-size: xx-large;
   }
 }
+
 /*Header-Fim*/
 /*Dropdown-Inicio*/
 .carret-down {
@@ -293,9 +329,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .carret-down div i {
   height: 5%;
 }
+
 .filtros {
   display: flex;
   justify-content: center;
@@ -305,12 +343,15 @@ body {
   transition: 1s height;
   overflow: hidden;
 }
-.altura{
+
+.altura {
   height: 100px;
 }
-.filtros .altura{
+
+.filtros .altura {
   height: 100px;
 }
+
 .ulFiltros {
   display: flex;
   height: 0px;
@@ -321,27 +362,32 @@ body {
   list-style: none;
   transition: 1s height;
 }
+
 .filtros li {
   padding-right: 40px;
   color: black;
   font-size: 25px;
   cursor: pointer;
 }
+
 @media (max-width:698px) {
-  .filtros li{
+  .filtros li {
     padding-right: 10px;
     overflow: scroll;
   }
-  .ulFiltros{
+
+  .ulFiltros {
     overflow: scroll;
   }
 }
+
 /*Dropdown-Fim*/
 /*----------*/
 /*Main-Inicio*/
 main {
   height: 95vh;
 }
+
 /*filmes-inicio*/
 .filmes {
   display: flex;
@@ -349,35 +395,42 @@ main {
   font-family: Title_movie;
   width: 100%;
 }
+
 .filme {
   margin: 20px;
   color: black;
   cursor: pointer;
 }
+
 .titulo_filme {
   font-size: x-large;
   display: flex;
   justify-content: center;
 }
+
 .img_filme {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .row {
   display: flex;
   justify-content: center;
   margin: 0;
   width: 100%;
 }
-.hide{
+
+.hide {
   display: none;
 }
-.nenc{
+
+.nenc {
   margin-top: 20%;
   font-size: xx-large;
   width: 50%;
 }
+
 /*filmes-fim*/
 /*cardbox-inicio*/
 .cardbox {
@@ -391,6 +444,7 @@ main {
   background: rgba(0, 0, 0, 0.5);
   display: none;
 }
+
 .card {
   display: flex;
   flex-direction: row;
@@ -403,26 +457,28 @@ main {
   border-width: 5px;
   border-radius: 0;
 }
+
 #close_card {
   font-size: 25px;
   cursor: pointer;
 }
-.card span p:nth-child(3){
-  overflow: scroll;
-}
+
 .card span p:nth-child(2) {
   text-decoration: underline;
   color: #f0eeee;
 }
+
 .card img {
   aspect-ratio: 6/9;
   width: auto;
   margin-right: 20px;
 }
+
 .estrelas img {
   aspect-ratio: 4/4;
   width: 6%;
 }
+
 .medidor {
   display: flex;
   position: relative;
@@ -433,6 +489,7 @@ main {
   width: 50px;
   border-radius: 50%;
 }
+
 .medidor::before {
   content: "";
   position: absolute;
@@ -441,73 +498,91 @@ main {
   background-color: #081c22;
   border-radius: 50%;
 }
+
 .valor_barra {
   margin: 0;
   position: relative;
   font-weight: bold;
 }
-.medidor:hover{
+
+.medidor:hover {
   height: 60px;
   width: 60px;
   transition: width 0.1s;
   transition: height 0.1s;
 }
-.medidor:hover::before{
+
+.medidor:hover::before {
   height: 50px;
   width: 50px;
   transition: width 5ms;
-  transition: height  5ms;
+  transition: height 5ms;
 }
-.card_bottom{
+
+.card_bottom {
   display: flex;
   justify-content: space-between;
 }
-.fa-bookmark{
+
+.fa-bookmark {
   font-size: 30px;
   cursor: pointer;
 }
+
 @media (max-width: 930px) {
-  .card{
+  .card {
     width: 90%;
     height: 60%;
   }
-  
-  .card img{
-  object-fit: contain;
- width: 60%;
+
+  .card img {
+    object-fit: contain;
+    width: 60%;
   }
-  .card_bottom{
+
+  .card_bottom {
     width: 50%;
   }
 }
+
 @media (max-width: 575px) {
-  .card{
+  .card {
     flex-direction: column;
     height: 80%;
     position: relative;
   }
+
   #close_card {
-    top:0;
+    top: 0;
     right: 10px;
     position: absolute;
   }
-  .card img{
+
+  .card img {
     display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
   }
-  .card_bottom{
-   width: 90%;
+
+  .card_bottom {
+    width: 90%;
   }
-  .nenc{
+
+  .nenc {
     font-size: 20px;
   }
 }
-@media (max-width: 400px){
-  .card{
+
+@media (max-width: 400px) {
+  .card {
     height: 100%;
     width: 100%;
   }
+}
+
+.navegação {
+  display: flex;
+  justify-content: center;
 }
