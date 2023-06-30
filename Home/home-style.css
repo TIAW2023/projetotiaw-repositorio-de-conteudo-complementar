@@ -54,6 +54,10 @@ nav {
 .nav-links li {
     margin: 10px;
 }
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+}
 
 .nav-div-input {
     height: 50px;
@@ -110,7 +114,7 @@ section {
     width: 200px;
 }
 
-.história-title, .música-title, .guerra-title{
+.title{
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     display: flex;
@@ -122,7 +126,7 @@ section {
     justify-content: center;
 }
 
-.história-title h1, .música-title h1, .guerra-title h1{
+.title h1{
     font-size: 48px;
     margin: 0;
 }
@@ -264,7 +268,7 @@ margin: 30px;
 }
 
 @media screen and (max-width: 1450px) {
-    .história-title h1, .música-title h1, .guerra-title h1{
+    .title h1{
         font-size: 38px;
     }
 
@@ -425,13 +429,13 @@ margin: 30px;
     .poster-image {
         width: 40px;
     }
-    .música-title, .guerra-title, .história-title {
+    .title {
         width: 40vw;
     }
-    .música-title h1, .guerra-title h1, .história-title h1 {
+    .title h1 {
         font-size: 20px;
     }
-    .música-title h5, .guerra-title h5, .história-title h5 {
+    .title h5 {
         font-size: 10px;
         width: 20vw;
     }
