@@ -14,16 +14,23 @@ const filmes_dados = [
   { id: "tt0857355", categoria: "Historia Politica" },
   { id: "tt0318462", categoria: "Historia Politica Filosofia" },
   { id: "tt0271383", categoria: "Cinema" },
-  { id: "tt4873118", categoria: "teste" }
+  { id: "tt0120382", categoria: "Cinema Filosofia" },
+  { id: "tt0133093", categoria: "Cinema Filosofia" },
+  { id: "tt0050976", categoria: "Cinema Filosofia" },
+  { id: "tt0478304", categoria: "Cinema Filosofia" },
+  { id: "tt0044741", categoria: "Cinema Filosofia" },
+  { id: "tt4319088", categoria: "Filosofia Historia" },
 ];
 let filmes = [];
 let str = "";
 const divFilmes = document.getElementById("filmes");
 async function getFilmes() {
   for (let i = 0; i < filmes_dados.length; i++) {
-    filmes.push(await fetch(
-      `https://api.themoviedb.org/3/movie/${filmes_dados[i].id}?language=pt-BR&api_key=2dc6e5babc6cd433199c68a7f1f81d40`
-    ).then((res) => res.json()));
+    filmes.push(
+      await fetch(
+        `https://api.themoviedb.org/3/movie/${filmes_dados[i].id}?language=pt-BR&api_key=2dc6e5babc6cd433199c68a7f1f81d40`
+      ).then((res) => res.json())
+    );
   }
   return filmes;
 }
@@ -32,30 +39,30 @@ async function preencherFilmes(filmes_dados) {
     const pags = {
       pagina: 1,
       porPagina: 15,
-      totalPaginas: Math.ceil(filme.length / 15)
-    }
-    console.log(pags)
+      totalPaginas: Math.ceil(filme.length / 15),
+    };
+    console.log(pags);
     const controles = {
       proximo() {
         pags.pagina++;
 
-        const ultimaPagina = pags.pagina > pags.totalPaginas
+        const ultimaPagina = pags.pagina > pags.totalPaginas;
         if (ultimaPagina) {
-          pags.pagina--
+          pags.pagina--;
         }
       },
       anterior() {
-        pags.pagina--
+        pags.pagina--;
 
-        const primeiraPagina = pags.pagina < 1
+        const primeiraPagina = pags.pagina < 1;
         if (primeiraPagina) {
           pags.pagina++;
         }
       },
       irPara(pagina) {
-        pags.pagina = pagina
-      }
-    }
+        pags.pagina = pagina;
+      },
+    };
     for (let i = 0; i < filme.length; i++) {
       if (filme[i].success != false) {
         str += `<div class="filme ${filmes_dados[i].categoria} col-md-2 col-sm-5" onclick="openCard(${i})">
@@ -68,4 +75,3 @@ async function preencherFilmes(filmes_dados) {
   });
 }
 preencherFilmes(filmes_dados);
-

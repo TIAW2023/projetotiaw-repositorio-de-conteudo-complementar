@@ -130,6 +130,27 @@ section {
     font-size: 48px;
     margin: 0;
 }
+.Historia-title{
+    background-color: #20b4ff;
+}
+.Medicina-title{
+    background-color: #3961e1;
+}
+.Filosofia-title{
+    background-color: #ab3713;
+}
+.TI-title{
+    background-color: #52b700;
+}
+.Esportes-title{
+    background-color: #e7389d;
+}
+.Cinema-title{
+    background-color: #ec285f;
+}
+.Politica-title{
+    background-color: #9238e7;
+}
 
 h5{
     font-family: 'Montserrat', sans-serif;
