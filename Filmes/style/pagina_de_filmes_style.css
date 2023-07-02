@@ -48,6 +48,10 @@ body {
 }
 
 .menu {
+<<<<<<< Updated upstream
+=======
+  font-family: "Montserrat", sans-serif;
+>>>>>>> Stashed changes
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -65,12 +69,29 @@ body {
   display: flex;
   list-style: none;
   align-items: center;
+<<<<<<< Updated upstream
   padding-left: 10px;
+=======
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.menuop li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+>>>>>>> Stashed changes
 }
 
 .menuop li a {
+<<<<<<< Updated upstream
   font-weight: 50px;
   padding: 15px;
+=======
+>>>>>>> Stashed changes
   text-decoration: none;
   color: black;
 }
@@ -78,6 +99,7 @@ body {
 .menuh {
   display: flex;
   justify-content: space-between;
+  height: 50px;
 }
 
 .search {
@@ -92,7 +114,7 @@ body {
 .search__input {
   margin: 20px 0 20px 0;
   width: 70%;
-  height: 50px;
+  height: 40px;
   font-family: inherit;
   font-size: 20px;
   text-align: inherit;
@@ -120,14 +142,14 @@ body {
   color: #ccc;
 }
 
-.search__input:focus+.search__button {
+.search__input:focus + .search__button {
   background-color: #f0eeee;
 }
 
 .search__button {
   border: none;
   background-color: #f4f2f2;
-  margin-top: 0.1em;
+  height: 40px;
 }
 
 .search__button:hover {
@@ -219,23 +241,23 @@ body {
     transition: height 0.6s;
   }
 
-  #mobile:checked+.menu {
+  #mobile:checked + .menu {
     height: 100%;
   }
 
-  #mobile:checked+.menu .close {
+  #mobile:checked + .menu .close {
     display: flex;
   }
 
-  #mobile:checked+.menu .menuop li a {
+  #mobile:checked + .menu .menuop li a {
     display: flex;
   }
 
-  #mobile:checked+.menu .search {
+  #mobile:checked + .menu .search {
     display: flex;
   }
 
-  #mobile:checked+.menu .menuh {
+  #mobile:checked + .menu .menuh {
     display: flex;
   }
 
@@ -248,7 +270,6 @@ body {
   .menuop li a {
     display: none;
   }
-
   .menuop {
     display: flex;
     justify-content: center;
@@ -257,13 +278,12 @@ body {
   }
 
   .search {
-    width: 35%;
+    position: relative;
     background: none;
     width: 100%;
     display: none;
-    align-items: center;
-    justify-content: center;
     margin-right: 0px;
+    margin-top: 30px;
   }
 
   .search__input {
@@ -280,12 +300,13 @@ body {
   }
 
   .search__button {
-    right: 25%;
+    right: 27%;
+    top:37%;
     position: absolute;
     border: none;
     background: none;
-    margin-top: 0.1em;
     font-size: small;
+    height: 10px;
   }
 
   .search__icon {
@@ -370,7 +391,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width:698px) {
+@media (max-width: 698px) {
   .filtros li {
     padding-right: 10px;
     overflow: scroll;
@@ -430,7 +451,29 @@ main {
   font-size: xx-large;
   width: 50%;
 }
-
+#numPag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#numPag p {
+  padding: 5px;
+  text-decoration: underline;
+}
+p {
+  margin: 0;
+}
+.fa-backward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-forward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*filmes-fim*/
 /*cardbox-inicio*/
 .cardbox {
@@ -557,13 +600,15 @@ main {
     right: 10px;
     position: absolute;
   }
-
+  .card span {
+    overflow: scroll;
+  }
   .card img {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 30%;
   }
 
   .card_bottom {

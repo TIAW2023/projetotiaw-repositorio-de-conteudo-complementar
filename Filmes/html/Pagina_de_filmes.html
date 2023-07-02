@@ -89,6 +89,7 @@
         </span>
         <div><i class="fa-solid fa-xmark" id="close_card"></i></div>
       </div>
+<<<<<<< Updated upstream
     </section>
   </main>
   <script src="../js/Filmes.js"></script>
@@ -100,3 +101,59 @@
 </body>
 
 </html>
+=======
+      <div class="dropdown">
+        <div class="filtros">
+          <ul class="ulFiltros">
+            <li onclick="filtrarCategorias('Todos')">Todos</li>
+            <li onclick="filtrarCategorias('Historia')">Historia</li>
+            <li onclick="filtrarCategorias('Medicina')">Medicina</li>
+            <li onclick="filtrarCategorias('Filosofia')">Filosofia</li>
+            <li onclick="filtrarCategorias('TI')">TI</li>
+            <li onclick="filtrarCategorias('Esportes')">Esportes</li>
+            <li onclick="filtrarCategorias('Cinema')">Cinema</li>
+            <li onclick="filtrarCategorias('Politica')">Politica</li>
+          </ul>
+        </div>
+        <div class="carret-down">
+          <div>
+            <i class="fa-solid fa-caret-down icon" style="color: #d03e3e"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="filmes container-fluid">
+        <span class="hide nenc"
+          >Não há filmes disponíveis nesta categoria no momento.Caso queira
+          sugerir algum acesse nossa <a href="../../Sugestão/paginadesugestao.html">pagina de sugestões</a></span
+        >
+        <div class="row" id="filmes"></div>
+      </div>
+      <section class="cardbox" id="cardbox">
+        <div class="card">
+          <img src="" id="filme_img" />
+          <span>
+            <h1></h1>
+            <p></p>
+            <p></p>
+            <div class="card_bottom">
+              <span class="medidor" title="Nota no TMDB">
+                <p class="valor_barra">0%</p>
+              </span>
+              <div><i class="fa-regular fa-bookmark"></i></div>
+            </div>
+          </span>
+          <div><i class="fa-solid fa-xmark" id="close_card"></i></div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/Filmes.js"></script>
+    <script src="../js/Card.js"></script>
+    <script src="../js/Favoritos.js"></script>
+    <script src="../js/Filtros.js"></script>
+    <script src="../js/Menus.js"></script>
+    <script src="../js/Paginação.js"></script>
+  </body>
+</html>
+>>>>>>> Stashed changes
