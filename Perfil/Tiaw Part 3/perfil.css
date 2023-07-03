@@ -493,6 +493,9 @@
       height: 100%;
       width: 100%;
     }
+    .card span{
+      overflow: scroll;
+    }
   }
   #picture__input {
     display: none;
@@ -515,7 +518,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 100%;
   }
   .picture__img {
     max-width: 130%;

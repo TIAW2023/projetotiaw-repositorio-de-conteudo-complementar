@@ -32,19 +32,20 @@ body {
   padding-top: 20px;
   background-color: white;
   color: black;
+  height: 207px;
 }
 
 .Learn {
   font-family: Learn;
   font-weight: bolder;
-  font-size: 80px;
+  font-size: 100px;
   letter-spacing: 30px;
 }
 
 .View {
   font-family: View;
   font-weight: 10;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .menu {
@@ -199,6 +200,7 @@ body {
     margin: 15px;
     background-color: white;
     color: black;
+    height: 50px;
   }
 
   .Learn {
