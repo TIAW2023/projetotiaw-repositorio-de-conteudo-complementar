@@ -1,3 +1,4 @@
+
 let atual;
 let users = JSON.parse(localStorage.listaUser)
 for (let i = 0; i < users.length; i++) {
@@ -31,7 +32,7 @@ bookmark.addEventListener("click", function () {
         localStorage.listaUser = JSON.stringify(user);
       }
     }
-    if (JSON.parse(localStorage.getItem("listaUser"))[atual].favs == "[]") {
+    if (JSON.parse(localStorage.listaUser)[atual].favs[0] == undefined) {
       user = JSON.parse(localStorage.getItem("listaUser"));
       delete user[atual].favs
       localStorage.listaUser = JSON.stringify(user)

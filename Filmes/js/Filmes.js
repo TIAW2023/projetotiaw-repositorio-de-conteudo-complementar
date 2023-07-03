@@ -29,36 +29,33 @@ async function getFilmes() {
 }
 async function preencherFilmes(filmes_dados) {
   getFilmes().then((filme) => {
-<<<<<<< Updated upstream
     const pags = {
       pagina: 1,
       porPagina: 15,
-      totalPaginas: Math.ceil(filme.length / 15)
-    }
-    console.log(pags)
+      totalPaginas: Math.ceil(filme.length / 15),
+    };
+    console.log(pags);
     const controles = {
       proximo() {
         pags.pagina++;
 
-        const ultimaPagina = pags.pagina > pags.totalPaginas
+        const ultimaPagina = pags.pagina > pags.totalPaginas;
         if (ultimaPagina) {
-          pags.pagina--
+          pags.pagina--;
         }
       },
       anterior() {
-        pags.pagina--
+        pags.pagina--;
 
-        const primeiraPagina = pags.pagina < 1
+        const primeiraPagina = pags.pagina < 1;
         if (primeiraPagina) {
           pags.pagina++;
         }
       },
       irPara(pagina) {
-        pags.pagina = pagina
-      }
-    }
-=======
->>>>>>> Stashed changes
+        pags.pagina = pagina;
+      },
+    };
     for (let i = 0; i < filme.length; i++) {
       if (filme[i].success != false) {
         str += `<div class="filme ${filmes_dados[i].categoria} col-md-2 col-sm-5" onclick="openCard(${i})">
