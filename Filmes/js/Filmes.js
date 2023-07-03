@@ -6,15 +6,20 @@ const filmes_dados = [
   { id: "tt0386792", categoria: "Medicina Historia" },
   { id: "tt0137523", categoria: "Cinema" },
   { id: "tt1186830", categoria: "Historia" },
-  { id: "tt1285016", categoria: "Computação Historia" },
-  { id: "tt2084970", categoria: "Computação Historia" },
+  { id: "tt1285016", categoria: "TI Historia" },
+  { id: "tt2084970", categoria: "TI Historia" },
   { id: "tt2119532", categoria: "Historia" },
   { id: "tt8404614", categoria: "Historia Politica" },
   { id: "tt0914798", categoria: "Historia Politica" },
   { id: "tt0857355", categoria: "Historia Politica" },
   { id: "tt0318462", categoria: "Historia Politica Filosofia" },
   { id: "tt0271383", categoria: "Cinema" },
-  { id: "tt4873118", categoria: "teste" }
+  { id: "tt0120382", categoria: "Cinema Filosofia" },
+  { id: "tt0133093", categoria: "Cinema Filosofia" },
+  { id: "tt0050976", categoria: "Cinema Filosofia" },
+  { id: "tt0478304", categoria: "Cinema Filosofia" },
+  { id: "tt0044741", categoria: "Cinema Filosofia" },
+  { id: "tt4319088", categoria: "Filosofia Historia" }
 ];
 let filmes = [];
 let str = "";

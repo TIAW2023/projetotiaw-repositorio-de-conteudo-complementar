@@ -104,5 +104,5 @@ getFilmes().then(() => {
 let sair = document.getElementById('Sair');
 sair.addEventListener('click',()=>{
   localStorage.removeItem('userLogado');
-  window.location.href = "../Home/Home não logado.html"
+  window.location.href = "../Home/index.html"
 })
