@@ -2,8 +2,8 @@ const filmes_dados = [
   { id: "tt0995868", categoria: "Historia Esportes" },
   { id: "tt5013056", categoria: "Historia" },
   { id: "tt1016150", categoria: "Historia" },
-  { id: "tt0129290", categoria: "Medicina" },
-  { id: "tt0386792", categoria: "Medicina Historia" },
+  { id: "tt0129290", categoria: "Biologia" },
+  { id: "tt0386792", categoria: "Biologia Historia" },
   { id: "tt0137523", categoria: "Cinema" },
   { id: "tt1186830", categoria: "Historia" },
   { id: "tt1285016", categoria: "TI Historia" },
@@ -19,16 +19,19 @@ const filmes_dados = [
   { id: "tt0050976", categoria: "Cinema Filosofia" },
   { id: "tt0478304", categoria: "Cinema Filosofia" },
   { id: "tt0044741", categoria: "Cinema Filosofia" },
-  { id: "tt4319088", categoria: "Filosofia Historia" }
+  { id: "tt4319088", categoria: "Filosofia Historia" },
+  { id: "tt6026818", categoria: "Biologia" },
 ];
 let filmes = [];
 let str = "";
 const divFilmes = document.getElementById("filmes");
 async function getFilmes() {
   for (let i = 0; i < filmes_dados.length; i++) {
-    filmes.push(await fetch(
-      `https://api.themoviedb.org/3/movie/${filmes_dados[i].id}?language=pt-BR&api_key=2dc6e5babc6cd433199c68a7f1f81d40`
-    ).then((res) => res.json()));
+    filmes.push(
+      await fetch(
+        `https://api.themoviedb.org/3/movie/${filmes_dados[i].id}?language=pt-BR&api_key=2dc6e5babc6cd433199c68a7f1f81d40`
+      ).then((res) => res.json())
+    );
   }
   return filmes;
 }
@@ -46,4 +49,3 @@ async function preencherFilmes(filmes_dados) {
   });
 }
 preencherFilmes(filmes_dados);
-

@@ -8,8 +8,8 @@ const filmesID = [
   { id: "tt0995868", categoria: "Historia Esportes" },
   { id: "tt5013056", categoria: "Historia" },
   { id: "tt1016150", categoria: "Historia" },
-  { id: "tt0129290", categoria: "Medicina" },
-  { id: "tt0386792", categoria: "Medicina Historia" },
+  { id: "tt0129290", categoria: "Biologia" },
+  { id: "tt0386792", categoria: "Biologia Historia" },
   { id: "tt0137523", categoria: "Cinema" },
   { id: "tt1186830", categoria: "Historia" },
   { id: "tt1285016", categoria: "TI Historia" },
@@ -54,7 +54,7 @@ getFilmes().then(() => {
     const mainTag = document.querySelector("main");
     const genres = [
       "Historia",
-      "Medicina",
+      "Biologia",
       "Filosofia",
       "TI",
       "Esportes",

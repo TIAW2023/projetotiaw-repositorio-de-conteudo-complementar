@@ -5,7 +5,7 @@ const img = document.createElement("img");
 let atual;
 let users = JSON.parse(localStorage.listaUser)
 for (let i = 0; i < users.length; i++) {
-  if (users[i].nomeCad == JSON.parse(localStorage.userLogado).nome || users[i].nomeCad == JSON.parse(localStorage.userLogado).nomeCad) {
+  if (users[i].userCad == JSON.parse(localStorage.userLogado).user || users[i].userCad == JSON.parse(localStorage.userLogado).userCad) {
     atual = i;
   }
 }
