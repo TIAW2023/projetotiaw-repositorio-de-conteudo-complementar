@@ -2,7 +2,64 @@ body {
     width: 100vw;
     margin: 0
 }
-
+@font-face {
+    font-family: Learn;
+    src: url(../Filmes/style/Avenue.otf);
+  }
+  
+  @font-face {
+    font-family: View;
+    src: url(../Filmes/style/Louis\ George\ Cafe.ttf);
+  }
+  .Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: white;
+    color: black;
+  }
+  
+  .Learn {
+    font-family: Learn;
+    font-weight: bolder;
+    font-size: 100px;
+    letter-spacing: 30px;
+  }
+  
+  .View {
+    font-family: View;
+    font-weight: 10;
+    font-size: 60px;
+  }
+  @media (max-width: 788px){
+    .Title {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: white;
+        color: black;
+        height: 50px;
+      }
+    .Title h1{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      .Learn {
+        font-family: Learn;
+        font-weight: bolder;
+        font-size: 30px;
+        letter-spacing: 10px;
+      }
+    
+      .View {
+        font-family: View;
+        font-weight: 10;
+        font-size: 10px;
+      }
+  }
 ::-webkit-scrollbar {
     width: 10px;
     height: 8px;
@@ -329,7 +386,7 @@ margin: 30px;
 @media screen and (max-width: 1030px) {
     .nav-links {
         padding: 0;
-        width: 70vw;
+        width: 100vw;
         align-items: center;
         font-size: 15px;
     }
@@ -436,8 +493,8 @@ margin: 30px;
 
 @media screen and (max-width: 490px) {
     .nav-links {
-        width: 70vw;
-        font-size: 5px;
+        width: 100vw;
+        font-size: 10px;
     }
 
     .nav-links li {
@@ -448,7 +505,7 @@ margin: 30px;
         width: 80px;
     }
     .poster-image {
-        width: 40px;
+        width: 100px;
     }
     .title {
         width: 40vw;
