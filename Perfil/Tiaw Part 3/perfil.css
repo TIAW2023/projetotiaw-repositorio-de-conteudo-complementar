@@ -5,19 +5,19 @@
   
   body {
     font-family: View;
-    background-color: #f5c120;
+    background-color: #3961e1;
   }
   @font-face {
     font-family: Learn;
-    src: url(Avenue.otf);
+    src: url(/Filmes/style/Avenue.otf);
   }
   @font-face {
     font-family: View;
-    src: url(Louis\ George\ Cafe.ttf);
+    src: url(/Filmes/style/Louis\ George\ Cafe.ttf);
   }
   @font-face {
     font-family: Title_movie;
-    src: url(SourceSansPro-Black.ttf);
+    src: url(/Filmes/style/SourceSansPro-Black.ttf);
   }
   /*Header-Inicio*/
   .Title {
@@ -511,10 +511,55 @@
     font-family: sans-serif;  
     overflow: hidden;
   }
-  
-  
-  
+  .picture__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
   .picture__img {
-    max-width: 100%;
+    max-width: 130%;
     border-radius: 50%;
+  }
+  .ModificarNome{
+    cursor: pointer;
+    width: 100%;
+    background: none;
+    font-size: large;
+    border: none;
+    outline: none;
+    background-color: #161616;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #505050;
+  }
+  .ModificarNome:active{
+      transform: translateY(5px);
+      box-shadow: 0px 0px 0px 0px #505050;
+  }
+  .perfil{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .nome{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #username{
+    font-size: xx-large;
+  }
+  .none{
+    display: none;
+  }
+  .Favoritos{
+    font-weight: bolder;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
   }

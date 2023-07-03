@@ -1,7 +1,25 @@
 const inputFile = document.querySelector("#picture__input");
 const pictureImage = document.querySelector(".picture__image");
-const pictureImageTxt = "Choose an image";
+const pictureImageTxt = "Escolher uma imagem";
+let atual;
+let users = JSON.parse(localStorage.listaUser)
+for (let i = 0; i < users.length; i++) {
+  if (users[i].nomeCad == JSON.parse(localStorage.userLogado).nome || users[i].nomeCad == JSON.parse(localStorage.userLogado).nomeCad) {
+    atual = i;
+  }
+}
 pictureImage.innerHTML = pictureImageTxt;
+var username = document.getElementById("username");
+let nome = JSON.parse(localStorage.userLogado).nome;
+if(nome==undefined){
+  console.log("entrou")
+  let teste = JSON.parse(localStorage.userLogado)
+  teste.nome = teste.nomeCad
+  console.log(teste)
+  localStorage.userLogado = JSON.stringify(teste)
+}
+username.innerHTML = JSON.parse(localStorage.userLogado).nome
+
 inputFile.addEventListener("change", function (e) {
   const inputTarget = e.target;
   const file = inputTarget.files[0];
@@ -28,28 +46,30 @@ function showMenu() {
   var userLogado = localStorage.getItem("userLogado");
   if (userLogado) {
     var userData = JSON.parse(userLogado);
-    var username = document.getElementById("username");
-    username.textContent = "Nome de usuário: " + userData.username;
+    username.textContent = userData.nome;
   }
 }
 
 function editName() {
-  var newName = prompt("Digite o novo nome:");
-  if (newName !== null && newName.trim() !== "") {
+  let input = document.getElementById('novoNome')
+  input.classList.toggle('none')
+  if(input.className.includes('none')){
+  if (input.value !== null && input.value !== "") {
     var userLogado = localStorage.getItem("userLogado");
     if (userLogado) {
       var userData = JSON.parse(userLogado);
-      userData.username = newName;
-      localStorage.setItem("userLogado", JSON.stringify(userData));
+      userData.nome = input.value;
+      localStorage.userLogado = JSON.stringify(userData);
       var username = document.getElementById("username");
-      username.textContent = "Nome de usuário: " + newName;
-      console.log("Nome atualizado: " + newName);
+      username.textContent = input.value;
+      users[atual]= JSON.parse(localStorage.userLogado);
+      localStorage.listaUser = JSON.stringify(users);
+      console.log("Nome atualizado: " + input.value);
     }
   }
+  input.value = ''
+}
 }
 
+
 // Simulando a criação do objeto userValid e salvando-o no localStorage
-var userValid = {
-  username: "Nome de Usuário Padrão"
-};
-localStorage.setItem("userLogado", JSON.stringify(userValid));

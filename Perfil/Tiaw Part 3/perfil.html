@@ -36,13 +36,13 @@
         ></label>
         <nav class="menuh">
           <ul class="menuop">
-            <li><a href="">Home</a></li>            
-            <li><a href="">Sugestão</a></li>
+            <li><a href="../../Home/Home logado.html">Home</a></li>            
+            <li><a href="../../Sugestão/pagina de sugestão/paginadesugestao.html">Sugestão</a></li>
             <!-- a tag <b> significa que voce esta nesta na pagina -->
             <li>
-              <a href="">Filmes</a>
+              <a href="../../Filmes/html/Pagina_de_filmes.html">Filmes</a>
             </li>
-            <li><a href="">Series</a></li>
+            <li><a href="../../">Series</a></li>
           </ul>          
           <div class="search">
             <input type="text" id="pesquisar" class="search__input" placeholder="Pesquisar" />
@@ -51,18 +51,19 @@
             </button>
           </div>
         </nav>
+      </div>  
       </div>
-      <label class="picture" for="picture__input" tabIndex="0">
-        <span class="picture__image"></span>
-        <input type="file" name="picture__input" id="picture__input">
-      </label>
-      <ul id="menu" class="hidden">
-        <li id="username"></li>
-        <li><a href="#" onclick="editName()"><h5>Modificar nome</h5></a></li>
-      </ul>     
+      <div class="perfil">
+        <label class="picture" for="picture__input" tabIndex="0">
+          <span class="picture__image"></span>
+          <input type="file" name="picture__input" id="picture__input">
+        </label>
+        <span class="nome"><span id="username"></span><button class="ModificarNome" onclick="editName()">Modificar nome</button><input class="none" id="novoNome" type="text"></span>
       </div>
     </header>
+    <hr>
     <main>
+      <h5 class="Favoritos">Favoritos</h5>
       <div class="filmes container-fluid">
         <span class="hide nenc">Não há filmes disponíveis nesta categoria no momento.Caso queira sugerir algum acesse nossa <a href="">pagina de sugestões</a></span>
         <div class="row" id="filmes">          
@@ -79,7 +80,6 @@
               <span class="medidor" title="Nota no TMDB">
                 <p class="valor_barra">0%</p>
               </span>
-              <div><i class="fa-regular fa-bookmark"></i></div>
             </div>
           </span>
           <div><i class="fa-solid fa-xmark" id="close_card"></i></div>
@@ -88,9 +88,7 @@
     </main>
     <script src="perfilfilmes.js"></script>
     <script src="cardperfil.js"></script>
-    <script src="favoritosperfil.js"></script>
     <script src="perfilfiltro.js"></script>
-    <script src="menuperfil.js"></script>
     <script src="perfil.js"></script>
   </body>
 </html>

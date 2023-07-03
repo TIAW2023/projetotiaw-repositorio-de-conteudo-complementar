@@ -101,3 +101,8 @@ getFilmes().then(() => {
   }
   createMovieSections();
 });
+let sair = document.getElementById('Sair');
+sair.addEventListener('click',()=>{
+  localStorage.removeItem('userLogado');
+  window.location.href = "../Home/Home não logado.html"
+})

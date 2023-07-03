@@ -9,7 +9,7 @@ for (let i = 0; i < users.length; i++) {
 let bookmark = document.getElementsByClassName("fa-bookmark")[0];
 let favs = [];
 let user;
-
+localStorage.userLogado = JSON.stringify(users[atual]);
 bookmark.addEventListener("click", function () {
   let parametros = new URLSearchParams(window.location.search);
 

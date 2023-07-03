@@ -19,6 +19,9 @@ body {
   background-color: white;
   color: black;
 }
+#Sair{
+  cursor: pointer;
+}
 
 .Learn {
   font-family: Learn;
