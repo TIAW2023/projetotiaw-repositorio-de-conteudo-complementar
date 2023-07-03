@@ -21,7 +21,7 @@ const series_dados = [
         if (filme[i].success != false) {
           str += `<div class="filme ${series_dados[i].categoria} col-md-2 col-sm-5" onclick="openCard(${i})">
                   <img src="https://image.tmdb.org/t/p/original/${filme[i].poster_path}" class="img_filme">
-                  <h2 class="titulo_filme">${filme[i].tagline}</h2>
+                  <h2 class="titulo_filme">${filme[i].name}</h2>
           </div>`;
           divFilmes.innerHTML = str;
         }

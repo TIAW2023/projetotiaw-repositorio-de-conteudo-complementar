@@ -11,7 +11,7 @@ function openCard(posição) {
   ).src = `https://image.tmdb.org/t/p/original/${filmes[posição].poster_path}`;
   document.querySelector(
     ".card span h1"
-  ).innerHTML = `${filmes[posição].tagline}`;
+  ).innerHTML = `${filmes[posição].name}`;
   document.querySelector(".card span p").innerHTML = `${filmes[
     posição
   ].first_air_date.substring(0, 4)}`;
