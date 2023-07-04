@@ -2,6 +2,22 @@ body {
     font-family: View;
     background-color: #f5c120;
   }
+  @font-face {
+    font-family: Learn;
+    src: url(/Filmes/style/Avenue.otf);
+  }
+  
+  @font-face {
+    font-family: View;
+    src: url(/Filmes/style/Louis\ George\ Cafe.ttf);
+  }
+  
+  @font-face {
+    font-family: Title_movie;
+    src: url(/Filmes/style/SourceSansPro-Black.ttf);
+  }
+  
+  /*Header-Inicio*/
   .Title {
     display: flex;
     justify-content: center;
@@ -10,19 +26,21 @@ body {
     padding-top: 20px;
     background-color: white;
     color: black;
+    height: 207px;
   }
+  
   .Learn {
     font-family: Learn;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 100px;
     letter-spacing: 30px;
   }
+  
   .View {
     font-family: View;
     font-weight: 10;
-    font-size: 40px;
+    font-size: 60px;
   }
-  
   .menu {
     flex-wrap: wrap;
     align-items: center;
