@@ -14,3 +14,8 @@ function validarEmail(){
       error.innerHTML = "";
     }
   }
+   function envForm () {
+    var enviar = document.querySelector('#enviar');
+    alert('Formulário Enviado!');
+   }
+   
