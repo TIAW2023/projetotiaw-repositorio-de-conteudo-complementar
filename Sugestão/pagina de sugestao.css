@@ -10,17 +10,17 @@ body {
 
 @font-face {
   font-family: Learn;
-  src: url(Avenue.otf);
+  src: url(../Filmes/style/Avenue.otf);
 }
 
 @font-face {
   font-family: View;
-  src: url(Louis\ George\ Cafe.ttf);
+  src: url(../Filmes/style/Louis\ George\ Cafe.ttf);
 }
 
 @font-face {
   font-family: Title_movie;
-  src: url(SourceSansPro-Black.ttf);
+  src: url(../Filmes/style/SourceSansPro-Black.ttf);
 }
 
 /*Header-Inicio*/

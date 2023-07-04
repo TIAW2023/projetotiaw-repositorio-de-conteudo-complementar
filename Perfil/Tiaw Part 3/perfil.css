@@ -9,15 +9,15 @@
   }
   @font-face {
     font-family: Learn;
-    src: url(/Filmes/style/Avenue.otf);
+    src: url(../../Filmes/style/Avenue.otf);
   }
   @font-face {
     font-family: View;
-    src: url(/Filmes/style/Louis\ George\ Cafe.ttf);
+    src: url(../../Filmes/style/Louis\ George\ Cafe.ttf);
   }
   @font-face {
     font-family: Title_movie;
-    src: url(/Filmes/style/SourceSansPro-Black.ttf);
+    src: url(../../Filmes/style/SourceSansPro-Black.ttf);
   }
   /*Header-Inicio*/
   .Title {

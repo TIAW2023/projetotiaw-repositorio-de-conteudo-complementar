@@ -4,6 +4,7 @@ const pictureImageTxt = "Escolher uma imagem";
 const img = document.createElement("img");
 let atual;
 let users = JSON.parse(localStorage.listaUser)
+console.log(users)
 for (let i = 0; i < users.length; i++) {
   if (users[i].userCad == JSON.parse(localStorage.userLogado).user || users[i].userCad == JSON.parse(localStorage.userLogado).userCad) {
     atual = i;
@@ -14,6 +15,7 @@ function updateImg(){
       pictureImage.innerHTML = null;
       pictureImage.appendChild(img);
       img.src = users[atual].imagem
+      console.log(users)
 }
 if(img.src==undefined){
 pictureImage.innerHTML = pictureImageTxt;
@@ -26,7 +28,7 @@ if(nome==undefined){
   localStorage.userLogado = JSON.stringify(teste)
 }
 username.innerHTML = JSON.parse(localStorage.userLogado).nome
-
+updateImg()
 inputFile.addEventListener("change", function (e) {
   const inputTarget = e.target;
   const file = inputTarget.files[0];
@@ -78,7 +80,7 @@ function editName() {
   input.value = ''
 }
 }
-updateImg()
+
 
 
 // Simulando a criação do objeto userValid e salvando-o no localStorage
